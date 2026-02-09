@@ -1,0 +1,25 @@
+@startuml
+title Arquitetura - Order Service
+
+package "Frontend" {
+  [React] --> [Redux Toolkit]
+  [Redux Toolkit] --> [Apollo Client]
+}
+
+node "Kubernetes Cluster" {
+
+  package "Backend" {
+    [GraphQL API (NestJS)] --> [Order Service]
+  }
+
+  package "Infraestrutura" {
+    [Order Service] --> [Redis]
+    [Order Service] --> [PostgreSQL]
+    [Order Service] --> [RabbitMQ]
+  }
+
+}
+
+[Apollo Client] --> [GraphQL API (NestJS)]
+
+@enduml

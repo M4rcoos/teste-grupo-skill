@@ -4,7 +4,20 @@ Este projeto representa um **microsserviço de pedidos (Order Service)**, desenv
 
 O serviço é implementado em **Node.js (NestJS)**, expõe um endpoint **GraphQL** para consulta de pedidos e utiliza **PostgreSQL** e **Redis** para persistência e cache.
 
----
+## Como rodar o projeto
+
+### Pré-requisitos
+- Docker
+- Docker Compose
+
+### Subindo o ambiente
+cp .env.example .env
+docker compose up -d
+
+### Acessos
+API GraphQL: http://localhost:3000/graphql
+Postgres: localhost:5432
+Redis: localhost:6379
 
 ## 🚀 Tecnologias utilizadas
 
@@ -31,21 +44,13 @@ O projeto segue o princípio de **Clean Architecture**, com dependências unidir
 - Testabilidade completa de regras de negócio  
 - Código previsível e modular  
 
----
-
-## 🐳 Docker
-
-Para rodar a aplicação localmente, use:
-
-```bash
-docker compose up -d
-```
 ## 🛠 Banco de Dados
 
 O banco de dados PostgreSQL já pode ser **populado automaticamente** com dados iniciais usando a **seed**.  
 
 - O arquivo de seed está localizado em: `prisma/seeds/seed.ts`  
 - Ele insere registros de teste no banco para facilitar o desenvolvimento e testes de requests  
+
 
 ### 🔗 Conexão para testes
 

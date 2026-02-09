@@ -1,0 +1,7 @@
+apiVersion: payments.com/v1
+kind: PaymentJob
+metadata:
+  name: payment-job
+spec:
+  queueName: payments
+  databaseUrl: postgresql://admin:admin@postgres:5432/payments

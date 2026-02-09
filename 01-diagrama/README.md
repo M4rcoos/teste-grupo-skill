@@ -1,4 +1,4 @@
-# 📦 Order Service – Teste Técnico (Node.js / React)
+# 📦 Order Service – PlantUML
 
 Este repositório contém a implementação parcial de um **Order Service** utilizando **Node.js (NestJS)**, **GraphQL**, **PostgreSQL**, **Redis** e um **diagrama de arquitetura em PlantUML**, conforme solicitado no teste técnico.
 

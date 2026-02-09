@@ -8,6 +8,7 @@ RUN npm install
 COPY . .
 
 RUN npm install -g @nestjs/cli
+RUN npx prisma generate
 RUN npm run build
 
 COPY docker-entrypoint.sh .
